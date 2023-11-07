@@ -1,0 +1,177 @@
+
+/* common css Starts */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Teko&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: teko;
+}
+
+
+/* common css ends */
+
+/* section css satrts */
+.container{
+    width: 400px;
+    height: 450px;
+    margin: 80px auto ;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    overflow: hidden;
+    background-image: url(../images/01-black-cat_800x600_v1.gif);
+    background-position: center;
+    background-size: cover;
+
+}
+
+h4{
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.container form{
+    width: 300px; 
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    transition: 0.75s;
+}
+
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: teko;
+    font-size: 18px;
+}
+
+.btn_box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form button{
+    width: 110px;
+    height: 36px;
+    margin: 0 15px;
+    border-radius: 25px;
+    border: none;
+    font-family: teko;
+    font-size: 25px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.formTwo{
+    margin-left: 450px;
+}
+
+.formThree{
+    margin-left: 450px;
+}
+
+.step-cnt{
+    width: 400px;
+    padding: 15px 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+    position: relative;
+}
+
+.stepOne{
+    width: 120px;
+    text-align: center;
+    color: #000000;
+    position: relative;
+}
+
+.stepOne p{
+    font-size: 25px;
+    color: #fff;
+
+}
+
+.progress{
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    background: #c31432;
+    transition: 1s;   
+}
+
+.progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 33px solid transparent;
+    border-bottom: 35px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #c31432;
+}
+
+.msg{
+    position: fixed;
+    top: 40px;
+    right: 10px;
+    color: #240b36;
+    font-size: 25px;
+    font-family: oswald;
+    font-weight: 600;
+    transform:translateX(130%) ;
+    opacity: 0;
+    transition: 0.80s cubic-bezier(0,1.22,.67,1.15);
+}
+
+.msg.active{
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+
+@media (min-width:320px) and (max-width:991px){
+    .msg {
+        padding: 10px 20px 2px;
+        font-size: 15px;
+    }
+    .container {
+        margin: 170px auto;
+       
+    }
+
+    .msg {
+        top: 130px;
+    }
+}
+
+
+/* section css ends */
