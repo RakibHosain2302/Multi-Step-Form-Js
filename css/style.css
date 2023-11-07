@@ -60,7 +60,7 @@ form input{
 }
 
 ::placeholder{
-    color: #fff;
+    color: grey;
     font-family: teko;
     font-size: 18px;
 }
